@@ -1,0 +1,26 @@
+{
+  "name": "poule",
+  "version": "0.0.0",
+  "description": "poule =====",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/fakeyou/poule"
+  },
+  "author": "Andre Nanninga <ag.nanninga@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fakeyou/poule/issues"
+  },
+  "homepage": "https://github.com/fakeyou/poule",
+  "devDependencies": {
+    "gulp": "^3.8.0",
+    "gulp-git": "^0.4.3"
+  },
+  "dependencies": {
+    "json-server": "^0.3.7"
+  }
+}
