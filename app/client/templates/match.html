@@ -1,0 +1,41 @@
+<template name="match">
+	<div class="row match {{status}}">
+		<div class="col-md-12 startTime">
+			<span class="text-muted">{{getStartTime}}</span>
+		</div>
+
+		<div class="col-md-6 col-sm-6 col-xs-6 team homeTeam">
+			{{#if isPreGame}}
+				<input type="number" class="teamScore" min="0" max="9">
+			{{else}}
+				<span class="teamScore">{{homeScore}}</span>
+			{{/if}}
+
+			<span class="teamFlag flag-icon-round flag-icon-background flag-icon-{{getCountryCode homeTeam}} flag-icon-squared"></span>
+			<h3 class="teamName hidden-xs">{{homeTeam}}</h3>
+		</div>
+
+		<div class="col-md-6 col-sm-6 col-xs-6 team awayTeam">
+			{{#if isPreGame}}
+				<input type="number" class="teamScore" min="0" max="9">
+			{{else}}
+				<span class="teamScore">{{awayScore}}</span>
+			{{/if}}
+			
+			<span class="teamFlag flag-icon-round flag-icon-background flag-icon-{{getCountryCode awayTeam}} flag-icon-squared"></span>
+			<h3 class="teamName hidden-xs">{{awayTeam}}</h3>
+		</div>
+
+		{{#unless isPreGame}}
+			<div class="predictions">
+				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
+					<span class="homeScore">1</span>
+				</div>
+
+				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
+					<span class="awayScore">3</span>
+				</div>
+			</div>
+		{{/unless}}
+	</div>
+</template>

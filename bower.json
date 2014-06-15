@@ -1,0 +1,19 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "homepage": "https://github.com/fakeyou/poule",
+  "authors": [
+    "Andre Nanninga <ag.nanninga@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "flag-icon-css": "~0.6.2"
+  }
+}

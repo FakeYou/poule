@@ -1,0 +1,80 @@
+.flag-icon-round {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+}
+
+.match {
+	padding: 20px 0;
+	background-color: #FAFAFA;
+}
+
+.match.final {
+	background-color: #F0F0F0;
+}
+
+.match.in-progress {
+	background-color: #DAF0DA;
+}
+
+.match .startTime {
+	text-align: center;
+}
+
+.team.homeTeam {
+	padding-right: 0;
+	text-align: right
+}
+
+.team.homeTeam * {
+	float: right;
+}
+
+.team.awayTeam {
+	padding-left: 0;
+	text-align: left
+}
+
+.team.awayTeam * {
+	float: left;
+}
+
+.team .teamName {
+	display: inline-block;
+	margin: 12px 20px;
+	color: #666;
+}
+
+.team .teamScore {
+	display: inline-block;
+	margin: 7px 20px;
+	font-size: 30px;
+	text-align: center;
+	width: 60px;
+}
+
+.team input.teamScore {
+	width: 60px;
+	border: none;
+	border-bottom: 1px solid #DDD;
+}
+
+.predictions .prediction .homeScore,
+.predictions .prediction .awayScore {
+	display: inline-block;
+	margin: 7px 20px;
+	font-size: 18px;
+	color: #333;
+	text-align: center;
+}
+
+.predictions .prediction .homeScore {
+	margin-right: 31px;
+	float: right;
+}
+
+.predictions .prediction .awayScore {
+	margin-left: 31px;
+	float: left;
+}

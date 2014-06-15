@@ -1,12 +1,17 @@
 var gulp = require('gulp');
-var git = require('gulp-git');
+var path = require('path');
 
-gulp.task('clone', function() {
-  git.clone('https://github.com/openfootball/world-cup');
-});
+var paths = {};
+paths.app = 'app';
+paths.client = path.join(paths.app, 'client');
+paths.common = path.join(paths.app, 'common');
+paths.public = path.join(paths.app, 'public');
+paths.bower = path.join(paths.public, 'lib');
+paths.server = path.join(paths.app, 'server');
 
-gulp.task('pull', function() {
-  git.pull('origin', 'master', {
-    cwd: 'resources/world-cup'
-  });
-});
+
+gulp.task('flag-icon-css', function() {
+	gulp.src([
+		paths.bower + '/flag-icon-css/css/*.min.css',
+	])
+})
