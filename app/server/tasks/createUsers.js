@@ -178,11 +178,11 @@ Meteor.startup(function() {
 						awayScore: 1
 					},
 					// Ghana - United States
-					// '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
-					// 	matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
-					// 	homeScore: 0,
-					// 	awayScore: 2
-					// }
+					'88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
+						matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
+						homeScore: 0,
+						awayScore: 2
+					}
 				}
 			}
 		},
@@ -271,11 +271,11 @@ Meteor.startup(function() {
 						awayScore: 2
 					},
 					// Ghana - United States
-					// '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
-					// 	matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
-					// 	homeScore: 0,
-					// 	awayScore: 2
-					// }
+					'88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
+						matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
+						homeScore: 0,
+						awayScore: 1
+					}
 				}
 			}
 		},
@@ -364,11 +364,11 @@ Meteor.startup(function() {
 						awayScore: 1
 					},
 					// Ghana - United States
-					// '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
-					// 	matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
-					// 	homeScore: 0,
-					// 	awayScore: 2
-					// }
+					'88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
+						matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
+						homeScore: 2,
+						awayScore: 3
+					}
 				}
 			}
 		},
@@ -457,11 +457,11 @@ Meteor.startup(function() {
 						awayScore: 2
 					},
 					// Ghana - United States
-					// '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
-					// 	matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
-					// 	homeScore: 0,
-					// 	awayScore: 2
-					// }
+					'88E61B68-7A32-40E9-8F0A-1304CAD5ABE8': {
+						matchId: '88E61B68-7A32-40E9-8F0A-1304CAD5ABE8',
+						homeScore: 0,
+						awayScore: 1
+					}
 				}
 			}
 		}
