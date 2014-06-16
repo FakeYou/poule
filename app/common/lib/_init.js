@@ -38,3 +38,7 @@ app = {
 };
 
 app.collections.users = Meteor.users;
+
+if(Meteor.isClient) {
+	app.collections.predictions = new Meteor.Collection('predictions');
+}

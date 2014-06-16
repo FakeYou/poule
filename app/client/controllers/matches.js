@@ -1,6 +1,9 @@
 MatchesController = RouteController.extend({
 	waitOn: function() {
-		return Meteor.subscribe('matches');
+		return [
+			Meteor.subscribe('matches'),
+			Meteor.subscribe('predictions')
+		];
 	},
 
 	data: function() {

@@ -8,6 +8,8 @@ Meteor.startup(function() {
 });
 
 function updateMatches() {
+	console.log('[updateMatches]');
+
 	var api = 'http://worldcup.kimonolabs.com/api';
 
 	var _teams = fetch(teamsUrl(api));
@@ -41,9 +43,18 @@ function updateMatches() {
 
 		if(doc) {
 			app.collections.matches.update({ _id: doc._id }, { $set: match });
+
+			if(doc.status !== match.status && match.status === 'final') {
+				// calculate prediction score
+				calcPredictionPoints(match.id, match.homeScore, match.awayScore);
+			}
 		}
 		else {
 			app.collections.matches.insert(match);
+
+			if(match.status === 'final') {
+				calcPredictionPoints(match.id, match.homeScore, match.awayScore);
+			}
 		}
 	}
 }

@@ -60,8 +60,18 @@
 	border-bottom: 1px solid #DDD;
 }
 
+.predictions .prediction .username {
+	display: inline-block;
+	margin: 7px 20px;
+	font-size: 16px;
+	color: #999;
+	float: right;
+}
+
 .predictions .prediction .homeScore,
 .predictions .prediction .awayScore {
+	min-width: 10px;
+	min-height: 25px;
 	display: inline-block;
 	margin: 7px 20px;
 	font-size: 18px;
@@ -85,4 +95,12 @@
 	font-size: 15px;
 	font-weight: bold;
 	color: #3BA686;
+}
+
+.predictions .prediction .predictionNone {
+	display: inline-block;
+	margin: 8px 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #E04946;
 }

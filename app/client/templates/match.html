@@ -30,12 +30,40 @@
 			<div class="predictions">
 				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
 					<span class="homeScore">{{getPredictionHomeScore}}</span>
+					<span class="username">{{getUsername}}</span>
 				</div>
 
 				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
 					<span class="awayScore">{{getPredictionAwayScore}}</span>
-					<span class="predictionPoints">{{getPredictionPoints}}+3 points</span>
+					{{#if isFinal}}
+						{{#if madePrediction}}
+							<span class="predictionPoints">{{getPredictionPoints}} points</span>
+						{{else}}
+							<span class="predictionNone">No points</span>
+						{{/if}}
+					{{/if}}
 				</div>
+			</div>
+			<div class="poulePredictions">
+				{{#each getPredictions}}
+					<div class="predictions">
+						<div class="col-md-6 col-sm-6 col-xs-6 prediction">
+							<span class="homeScore">{{homeScore}}</span>
+							<span class="username">{{username}}</span>
+						</div>
+
+						<div class="col-md-6 col-sm-6 col-xs-6 prediction">
+							<span class="awayScore">{{awayScore}}</span>
+							{{#if isFinal ..}}
+								{{#if homeScore}}
+									<span class="predictionPoints">{{points}} points</span>
+								{{else}}
+									<span class="predictionNone">No points</span>
+								{{/if}}
+							{{/if}}
+						</div>
+					</div>
+				{{/each}}
 			</div>
 		{{/unless}}
 	</div>

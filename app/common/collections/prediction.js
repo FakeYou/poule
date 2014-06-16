@@ -14,5 +14,10 @@ app.schemas.prediction = new SimpleSchema({
 		label: 'Away team score',
 		min: 0,
 		max: 9
+	},
+	points: {
+		type: Number,
+		label: 'Points',
+		optional: true
 	}
 });

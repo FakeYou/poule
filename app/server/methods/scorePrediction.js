@@ -20,14 +20,17 @@ Meteor.methods({
 			throw new Meteor.Error(400, invalid.message, invalid.message);
 		}
 
-		if(app.collections.matches.findOne({ id: prediction.matchId }) === undefined) {
+		var match = app.collections.matches.findOne({ id: prediction.matchId });
+
+		if(typeof match === 'undefined') {
 			throw new Meteor.Error(404, 'Match not found', 'Match not found');
 		}
+		if(match.status !== 'pre-game' || match.startTime < new Date()) {
+			throw new Meteor.Error(400, 'Predictions are closed', 'Predictions are closed');
+		}
 
-		var doc = { profile: { predictions: {} } };
+		var doc = { profile: { predictions: user.profile.predictions } };
 		doc.profile.predictions[prediction.matchId] = prediction;
-
-		console.log(doc);
 
 		app.collections.users.update({
 			_id: user._id
