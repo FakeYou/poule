@@ -10,7 +10,7 @@ MatchesController = RouteController.extend({
 	},
 
 	action: function() {
-		this.template = 'home';
+		this.template = 'matches';
 		this.render();
 	}
 });

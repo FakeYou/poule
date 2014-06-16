@@ -4,6 +4,7 @@ var Future = Npm.require('fibers/future');
 
 Meteor.startup(function() {
 	Meteor.setInterval(updateMatches, 30 * 1000);
+	updateMatches();
 });
 
 function updateMatches() {

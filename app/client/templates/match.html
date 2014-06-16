@@ -1,12 +1,12 @@
 <template name="match">
-	<div class="row match {{status}}">
+	<div class="row match {{status}}" data-id="{{id}}">
 		<div class="col-md-12 startTime">
 			<span class="text-muted">{{getStartTime}}</span>
 		</div>
 
 		<div class="col-md-6 col-sm-6 col-xs-6 team homeTeam">
 			{{#if isPreGame}}
-				<input type="number" class="teamScore" min="0" max="9">
+				<input name="homeScore" type="number" class="teamScore homeScore" min="0" max="9" value="{{getPredictionHomeScore}}">
 			{{else}}
 				<span class="teamScore">{{homeScore}}</span>
 			{{/if}}
@@ -17,7 +17,7 @@
 
 		<div class="col-md-6 col-sm-6 col-xs-6 team awayTeam">
 			{{#if isPreGame}}
-				<input type="number" class="teamScore" min="0" max="9">
+				<input name="awayScore" type="number" class="teamScore awayScore" min="0" max="9" value="{{getPredictionAwayScore}}">
 			{{else}}
 				<span class="teamScore">{{awayScore}}</span>
 			{{/if}}
@@ -29,11 +29,12 @@
 		{{#unless isPreGame}}
 			<div class="predictions">
 				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
-					<span class="homeScore">1</span>
+					<span class="homeScore">{{getPredictionHomeScore}}</span>
 				</div>
 
 				<div class="col-md-6 col-sm-6 col-xs-6 prediction">
-					<span class="awayScore">3</span>
+					<span class="awayScore">{{getPredictionAwayScore}}</span>
+					<span class="predictionPoints">{{getPredictionPoints}}+3 points</span>
 				</div>
 			</div>
 		{{/unless}}

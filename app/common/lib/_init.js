@@ -35,4 +35,6 @@ app = {
 		'belgium'            : 'be',
 		'algeria'            : 'dz'
 	}
-}
+};
+
+app.collections.users = Meteor.users;

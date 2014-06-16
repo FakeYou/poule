@@ -78,3 +78,11 @@
 	margin-left: 31px;
 	float: left;
 }
+
+.predictions .prediction .predictionPoints {
+	display: inline-block;
+	margin: 8px 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #3BA686;
+}

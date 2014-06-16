@@ -5,6 +5,7 @@
     "simple-schema": {},
     "collection2": {},
     "moment": {},
-    "bootstrap-3": {}
+    "bootstrap-3": {},
+    "autoform": {}
   }
 }
